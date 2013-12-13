@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NS_Country.h"
+#import "NS_CountryDataProvider.h"
 
-@interface NS_ViewController : UIViewController
+@interface NS_ViewController : UIViewController <UITableViewDataSource, UITabBarDelegate>
+
 
 @end

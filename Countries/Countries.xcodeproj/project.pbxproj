@@ -21,6 +21,9 @@
 		E6824E5F185B30450051AA2E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6824E41185B30450051AA2E /* UIKit.framework */; };
 		E6824E67185B30450051AA2E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E6824E65185B30450051AA2E /* InfoPlist.strings */; };
 		E6824E69185B30450051AA2E /* CountriesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6824E68185B30450051AA2E /* CountriesTests.m */; };
+		E6824E73185B31F00051AA2E /* countries.plist in Resources */ = {isa = PBXBuildFile; fileRef = E6824E72185B31F00051AA2E /* countries.plist */; };
+		E6824E76185B32D40051AA2E /* NS_Country.m in Sources */ = {isa = PBXBuildFile; fileRef = E6824E75185B32D40051AA2E /* NS_Country.m */; };
+		E6824E79185B32FB0051AA2E /* NS_CountryDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = E6824E78185B32FB0051AA2E /* NS_CountryDataProvider.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,11 @@
 		E6824E64185B30450051AA2E /* CountriesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CountriesTests-Info.plist"; sourceTree = "<group>"; };
 		E6824E66185B30450051AA2E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E6824E68185B30450051AA2E /* CountriesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountriesTests.m; sourceTree = "<group>"; };
+		E6824E72185B31F00051AA2E /* countries.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = countries.plist; sourceTree = "<group>"; };
+		E6824E74185B32D40051AA2E /* NS_Country.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NS_Country.h; sourceTree = "<group>"; };
+		E6824E75185B32D40051AA2E /* NS_Country.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NS_Country.m; sourceTree = "<group>"; };
+		E6824E77185B32FB0051AA2E /* NS_CountryDataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NS_CountryDataProvider.h; sourceTree = "<group>"; };
+		E6824E78185B32FB0051AA2E /* NS_CountryDataProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NS_CountryDataProvider.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +120,7 @@
 		E6824E43185B30450051AA2E /* Countries */ = {
 			isa = PBXGroup;
 			children = (
+				E6824E72185B31F00051AA2E /* countries.plist */,
 				E6824E4C185B30450051AA2E /* NS_AppDelegate.h */,
 				E6824E4D185B30450051AA2E /* NS_AppDelegate.m */,
 				E6824E4F185B30450051AA2E /* Main.storyboard */,
@@ -119,6 +128,10 @@
 				E6824E53185B30450051AA2E /* NS_ViewController.m */,
 				E6824E55185B30450051AA2E /* Images.xcassets */,
 				E6824E44185B30450051AA2E /* Supporting Files */,
+				E6824E74185B32D40051AA2E /* NS_Country.h */,
+				E6824E75185B32D40051AA2E /* NS_Country.m */,
+				E6824E77185B32FB0051AA2E /* NS_CountryDataProvider.h */,
+				E6824E78185B32FB0051AA2E /* NS_CountryDataProvider.m */,
 			);
 			path = Countries;
 			sourceTree = "<group>";
@@ -230,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6824E56185B30450051AA2E /* Images.xcassets in Resources */,
+				E6824E73185B31F00051AA2E /* countries.plist in Resources */,
 				E6824E48185B30450051AA2E /* InfoPlist.strings in Resources */,
 				E6824E51185B30450051AA2E /* Main.storyboard in Resources */,
 			);
@@ -251,8 +265,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6824E54185B30450051AA2E /* NS_ViewController.m in Sources */,
+				E6824E79185B32FB0051AA2E /* NS_CountryDataProvider.m in Sources */,
 				E6824E4A185B30450051AA2E /* main.m in Sources */,
 				E6824E4E185B30450051AA2E /* NS_AppDelegate.m in Sources */,
+				E6824E76185B32D40051AA2E /* NS_Country.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
