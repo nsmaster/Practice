@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NS_Country : NSObject
+@interface Country : NSObject
 
 @property (nonatomic, strong) NSString *Name;
 

@@ -6,22 +6,21 @@
 //  Copyright (c) 2013 Nikolay Shatilo. All rights reserved.
 //
 
-#import "NS_ViewController.h"
+#import "ViewController.h"
 
-@interface NS_ViewController ()
-{
-    NSArray *countries;
-}
+@interface ViewController ()
+
+@property (nonatomic, strong) NSArray *countries;
 
 @end
 
-@implementation NS_ViewController
+@implementation ViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	
-    countries = [NS_CountryDataProvider getCountries];
+    self.countries = [CountryDataProvider getCountries];
 }
 
 - (void)didReceiveMemoryWarning
@@ -34,12 +33,12 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return countries.count;
+    return [self.countries count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellId = @"CountruCell";
+    static NSString *CellId = @"CountryCell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellId];
     
@@ -47,20 +46,19 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellId];
     }
     
-    NS_Country *country = [countries objectAtIndex:indexPath.row];
+    Country *country = [self.countries objectAtIndex:indexPath.row];
     
     cell.textLabel.text = country.Name;
     
     
     if(country.Image) {
         cell.imageView.image = country.Image;
-    }
-    else {
+    } else {
         NSBlockOperation* blockOperation = [NSBlockOperation blockOperationWithBlock:^{
             country.Image = [UIImage imageWithData:[NSData dataWithContentsOfURL:country.ImageUrl]];
             [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
         }];
-        [[NSOperationQueue currentQueue] addOperation:blockOperation];
+        [[NSOperationQueue mainQueue] addOperation:blockOperation];
     }
     
     return cell;

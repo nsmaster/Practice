@@ -1,13 +1,15 @@
 //
-//  NS_Country.m
+//  NS_CountryDataProvider.h
 //  Countries
 //
 //  Created by Nikolay Shatilo on 13.12.13.
 //  Copyright (c) 2013 Nikolay Shatilo. All rights reserved.
 //
 
-#import "NS_Country.h"
+#import <Foundation/Foundation.h>
 
-@implementation NS_Country
+@interface CountryDataProvider : NSObject
+
++ (NSArray *)getCountries;
 
 @end

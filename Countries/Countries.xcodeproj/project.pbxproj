@@ -12,9 +12,9 @@
 		E6824E42185B30450051AA2E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6824E41185B30450051AA2E /* UIKit.framework */; };
 		E6824E48185B30450051AA2E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E6824E46185B30450051AA2E /* InfoPlist.strings */; };
 		E6824E4A185B30450051AA2E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E6824E49185B30450051AA2E /* main.m */; };
-		E6824E4E185B30450051AA2E /* NS_AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E6824E4D185B30450051AA2E /* NS_AppDelegate.m */; };
+		E6824E4E185B30450051AA2E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E6824E4D185B30450051AA2E /* AppDelegate.m */; };
 		E6824E51185B30450051AA2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6824E4F185B30450051AA2E /* Main.storyboard */; };
-		E6824E54185B30450051AA2E /* NS_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6824E53185B30450051AA2E /* NS_ViewController.m */; };
+		E6824E54185B30450051AA2E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6824E53185B30450051AA2E /* ViewController.m */; };
 		E6824E56185B30450051AA2E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6824E55185B30450051AA2E /* Images.xcassets */; };
 		E6824E5D185B30450051AA2E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6824E5C185B30450051AA2E /* XCTest.framework */; };
 		E6824E5E185B30450051AA2E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6824E3D185B30450051AA2E /* Foundation.framework */; };
@@ -22,8 +22,8 @@
 		E6824E67185B30450051AA2E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E6824E65185B30450051AA2E /* InfoPlist.strings */; };
 		E6824E69185B30450051AA2E /* CountriesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6824E68185B30450051AA2E /* CountriesTests.m */; };
 		E6824E73185B31F00051AA2E /* countries.plist in Resources */ = {isa = PBXBuildFile; fileRef = E6824E72185B31F00051AA2E /* countries.plist */; };
-		E6824E76185B32D40051AA2E /* NS_Country.m in Sources */ = {isa = PBXBuildFile; fileRef = E6824E75185B32D40051AA2E /* NS_Country.m */; };
-		E6824E79185B32FB0051AA2E /* NS_CountryDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = E6824E78185B32FB0051AA2E /* NS_CountryDataProvider.m */; };
+		E6824E76185B32D40051AA2E /* Country.m in Sources */ = {isa = PBXBuildFile; fileRef = E6824E75185B32D40051AA2E /* Country.m */; };
+		E6824E79185B32FB0051AA2E /* CountryDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = E6824E78185B32FB0051AA2E /* CountryDataProvider.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,11 +45,11 @@
 		E6824E47185B30450051AA2E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E6824E49185B30450051AA2E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E6824E4B185B30450051AA2E /* Countries-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Countries-Prefix.pch"; sourceTree = "<group>"; };
-		E6824E4C185B30450051AA2E /* NS_AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NS_AppDelegate.h; sourceTree = "<group>"; };
-		E6824E4D185B30450051AA2E /* NS_AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NS_AppDelegate.m; sourceTree = "<group>"; };
+		E6824E4C185B30450051AA2E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E6824E4D185B30450051AA2E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E6824E50185B30450051AA2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E6824E52185B30450051AA2E /* NS_ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NS_ViewController.h; sourceTree = "<group>"; };
-		E6824E53185B30450051AA2E /* NS_ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NS_ViewController.m; sourceTree = "<group>"; };
+		E6824E52185B30450051AA2E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E6824E53185B30450051AA2E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E6824E55185B30450051AA2E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E6824E5B185B30450051AA2E /* CountriesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CountriesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6824E5C185B30450051AA2E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -57,10 +57,10 @@
 		E6824E66185B30450051AA2E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E6824E68185B30450051AA2E /* CountriesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountriesTests.m; sourceTree = "<group>"; };
 		E6824E72185B31F00051AA2E /* countries.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = countries.plist; sourceTree = "<group>"; };
-		E6824E74185B32D40051AA2E /* NS_Country.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NS_Country.h; sourceTree = "<group>"; };
-		E6824E75185B32D40051AA2E /* NS_Country.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NS_Country.m; sourceTree = "<group>"; };
-		E6824E77185B32FB0051AA2E /* NS_CountryDataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NS_CountryDataProvider.h; sourceTree = "<group>"; };
-		E6824E78185B32FB0051AA2E /* NS_CountryDataProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NS_CountryDataProvider.m; sourceTree = "<group>"; };
+		E6824E74185B32D40051AA2E /* Country.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Country.h; sourceTree = "<group>"; };
+		E6824E75185B32D40051AA2E /* Country.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Country.m; sourceTree = "<group>"; };
+		E6824E77185B32FB0051AA2E /* CountryDataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountryDataProvider.h; sourceTree = "<group>"; };
+		E6824E78185B32FB0051AA2E /* CountryDataProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountryDataProvider.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,17 +121,17 @@
 			isa = PBXGroup;
 			children = (
 				E6824E72185B31F00051AA2E /* countries.plist */,
-				E6824E4C185B30450051AA2E /* NS_AppDelegate.h */,
-				E6824E4D185B30450051AA2E /* NS_AppDelegate.m */,
+				E6824E4C185B30450051AA2E /* AppDelegate.h */,
+				E6824E4D185B30450051AA2E /* AppDelegate.m */,
 				E6824E4F185B30450051AA2E /* Main.storyboard */,
-				E6824E52185B30450051AA2E /* NS_ViewController.h */,
-				E6824E53185B30450051AA2E /* NS_ViewController.m */,
+				E6824E52185B30450051AA2E /* ViewController.h */,
+				E6824E53185B30450051AA2E /* ViewController.m */,
 				E6824E55185B30450051AA2E /* Images.xcassets */,
 				E6824E44185B30450051AA2E /* Supporting Files */,
-				E6824E74185B32D40051AA2E /* NS_Country.h */,
-				E6824E75185B32D40051AA2E /* NS_Country.m */,
-				E6824E77185B32FB0051AA2E /* NS_CountryDataProvider.h */,
-				E6824E78185B32FB0051AA2E /* NS_CountryDataProvider.m */,
+				E6824E74185B32D40051AA2E /* Country.h */,
+				E6824E75185B32D40051AA2E /* Country.m */,
+				E6824E77185B32FB0051AA2E /* CountryDataProvider.h */,
+				E6824E78185B32FB0051AA2E /* CountryDataProvider.m */,
 			);
 			path = Countries;
 			sourceTree = "<group>";
@@ -209,7 +209,7 @@
 		E6824E32185B30450051AA2E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = NS_;
+				CLASSPREFIX = "";
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Nikolay Shatilo";
 				TargetAttributes = {
@@ -264,11 +264,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6824E54185B30450051AA2E /* NS_ViewController.m in Sources */,
-				E6824E79185B32FB0051AA2E /* NS_CountryDataProvider.m in Sources */,
+				E6824E54185B30450051AA2E /* ViewController.m in Sources */,
+				E6824E79185B32FB0051AA2E /* CountryDataProvider.m in Sources */,
 				E6824E4A185B30450051AA2E /* main.m in Sources */,
-				E6824E4E185B30450051AA2E /* NS_AppDelegate.m in Sources */,
-				E6824E76185B32D40051AA2E /* NS_Country.m in Sources */,
+				E6824E4E185B30450051AA2E /* AppDelegate.m in Sources */,
+				E6824E76185B32D40051AA2E /* Country.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
