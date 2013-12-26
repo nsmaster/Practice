@@ -1,14 +1,14 @@
 //
-//  ViewController.h
+//  MessageViewController.h
 //  DCHP Visualization
 //
-//  Created by Nikolay Shatilo on 22.12.13.
+//  Created by Nikolay Shatilo on 26.12.13.
 //  Copyright (c) 2013 Nikolay Shatilo. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface MessageViewController : UITableViewController
 
 @property (nonatomic) NSInteger stepNumber;
 

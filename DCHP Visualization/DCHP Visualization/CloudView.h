@@ -12,6 +12,7 @@
 
 @property (nonatomic, strong) NSString *text;
 
++ (id)createInstanceWithPoint;
 + (id)createInstanceWithPoint:(CGPoint)point;
 
 @end

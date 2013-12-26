@@ -28,11 +28,17 @@
     return self;
 }
 
-
-+ (id)createInstanceWithPoint:(CGPoint)point
++ (id)createInstanceWithPoint
 {
     UINib *nib = [UINib nibWithNibName:@"CloudView" bundle:nil];
     CloudView *view = [[nib instantiateWithOwner:self options:nil] objectAtIndex:0];
+    
+    return view;
+}
+
++ (id)createInstanceWithPoint:(CGPoint)point
+{
+    CloudView *view = [CloudView createInstanceWithPoint];
     view.center = point;
     
     return view;
