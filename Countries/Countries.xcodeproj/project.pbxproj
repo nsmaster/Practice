@@ -477,6 +477,7 @@
 				E6824E6E185B30450051AA2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E6824E6F185B30450051AA2E /* Build configuration list for PBXNativeTarget "CountriesTests" */ = {
 			isa = XCConfigurationList;
@@ -485,6 +486,7 @@
 				E6824E71185B30450051AA2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

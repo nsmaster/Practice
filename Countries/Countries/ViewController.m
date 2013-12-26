@@ -49,7 +49,7 @@
     Country *country = [self.countries objectAtIndex:indexPath.row];
     
     cell.textLabel.text = country.Name;
-    
+    cell.imageView.image = nil;
     
     if(country.Image) {
         cell.imageView.image = country.Image;
