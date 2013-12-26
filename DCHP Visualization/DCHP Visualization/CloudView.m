@@ -21,37 +21,17 @@
     self = [super initWithFrame:frame];
     if (self) {
 
-        
-        self.backgroundColor = [UIColor redColor];
-        // Initialization code
     }
     return self;
 }
 
-+ (id)createInstanceWithPoint
++ (id)createInstance
 {
     UINib *nib = [UINib nibWithNibName:@"CloudView" bundle:nil];
     CloudView *view = [[nib instantiateWithOwner:self options:nil] objectAtIndex:0];
     
     return view;
 }
-
-+ (id)createInstanceWithPoint:(CGPoint)point
-{
-    CloudView *view = [CloudView createInstanceWithPoint];
-    view.center = point;
-    
-    return view;
-}
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
 
 - (NSString *)text
 {

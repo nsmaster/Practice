@@ -42,19 +42,13 @@ NSString * const firstIpAddressText = @"IP: 192.168.0.2 MASK: 255.255.255.0 DHCP
     if(self.stepNumber != 0) {
         [self.startButton setTitle:@"Далее" forState:UIControlStateNormal];
         
-        self.cloudView = [CloudView createInstanceWithPoint];
+        self.cloudView = [CloudView createInstance];
         [self.view addSubview:self.cloudView];
     }
     
     if(self.stepNumber == 9) {
         [self.startButton setTitle:@"К началу" forState:UIControlStateNormal];
     }
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -162,7 +156,6 @@ NSString * const firstIpAddressText = @"IP: 192.168.0.2 MASK: 255.255.255.0 DHCP
             [self animationToPoint:endPoint];
             break;
         
-            
         case 5: {
             
             [self animationToPoint:endPoint withCompletion:^{

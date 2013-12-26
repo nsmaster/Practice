@@ -667,10 +667,10 @@
             </objects>
             <point key="canvasLocation" x="-474" y="-32"/>
         </scene>
-        <!--Other Message View Controller-->
+        <!--Table View Controller-->
         <scene sceneID="kRE-XY-J2d">
             <objects>
-                <tableViewController storyboardIdentifier="OtherMessagesView" id="DbG-TZ-I55" customClass="OtherMessageViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="OtherMessagesView" id="DbG-TZ-I55" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="dSd-KP-fSh">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

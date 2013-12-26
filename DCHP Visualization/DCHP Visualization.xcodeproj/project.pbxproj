@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		E6563ACB186CCA4800E4F272 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6563ACA186CCA4800E4F272 /* MessageViewController.m */; };
-		E6563ACE186CE5ED00E4F272 /* OtherMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6563ACD186CE5ED00E4F272 /* OtherMessageViewController.m */; };
 		E6C892A018677300008D3C6B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6C8929F18677300008D3C6B /* Foundation.framework */; };
 		E6C892A218677300008D3C6B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6C892A118677300008D3C6B /* CoreGraphics.framework */; };
 		E6C892A418677300008D3C6B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6C892A318677300008D3C6B /* UIKit.framework */; };
@@ -43,8 +42,6 @@
 /* Begin PBXFileReference section */
 		E6563AC9186CCA4800E4F272 /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
 		E6563ACA186CCA4800E4F272 /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
-		E6563ACC186CE5ED00E4F272 /* OtherMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtherMessageViewController.h; sourceTree = "<group>"; };
-		E6563ACD186CE5ED00E4F272 /* OtherMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherMessageViewController.m; sourceTree = "<group>"; };
 		E6C8929C18677300008D3C6B /* DCHP Visualization.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DCHP Visualization.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6C8929F18677300008D3C6B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E6C892A118677300008D3C6B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -142,8 +139,6 @@
 				E6C892DE18677E46008D3C6B /* CloudView.m */,
 				E6563AC9186CCA4800E4F272 /* MessageViewController.h */,
 				E6563ACA186CCA4800E4F272 /* MessageViewController.m */,
-				E6563ACC186CE5ED00E4F272 /* OtherMessageViewController.h */,
-				E6563ACD186CE5ED00E4F272 /* OtherMessageViewController.m */,
 			);
 			path = "DCHP Visualization";
 			sourceTree = "<group>";
@@ -293,7 +288,6 @@
 				E6C892B618677300008D3C6B /* ViewController.m in Sources */,
 				E6C892B018677300008D3C6B /* AppDelegate.m in Sources */,
 				E6C892AC18677300008D3C6B /* main.m in Sources */,
-				E6563ACE186CE5ED00E4F272 /* OtherMessageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

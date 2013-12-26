@@ -7,7 +7,6 @@
 //
 
 #import "MessageViewController.h"
-#import "OtherMessageViewController.h"
 
 @interface MessageViewController ()
 
@@ -63,7 +62,7 @@
 
 - (void)showOtherMessages
 {
-    OtherMessageViewController *viewController = [[self storyboard] instantiateViewControllerWithIdentifier:@"OtherMessagesView"];
+    UIViewController *viewController = [[self storyboard] instantiateViewControllerWithIdentifier:@"OtherMessagesView"];
     
     [self.navigationController pushViewController:viewController animated:YES];
 }
