@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:DCHP Visualization.xcodeproj">
+      location = "self:DHCP Visualization.xcodeproj">
    </FileRef>
 </Workspace>

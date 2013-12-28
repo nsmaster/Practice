@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E6C8929B18677300008D3C6B"
-               BuildableName = "DCHP Visualization.app"
-               BlueprintName = "DCHP Visualization"
-               ReferencedContainer = "container:DCHP Visualization.xcodeproj">
+               BuildableName = "DHCP Visualization.app"
+               BlueprintName = "DHCP Visualization"
+               ReferencedContainer = "container:DHCP Visualization.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E6C892BC18677300008D3C6B"
-               BuildableName = "DCHP VisualizationTests.xctest"
-               BlueprintName = "DCHP VisualizationTests"
-               ReferencedContainer = "container:DCHP Visualization.xcodeproj">
+               BuildableName = "DHCP VisualizationTests.xctest"
+               BlueprintName = "DHCP VisualizationTests"
+               ReferencedContainer = "container:DHCP Visualization.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E6C8929B18677300008D3C6B"
-            BuildableName = "DCHP Visualization.app"
-            BlueprintName = "DCHP Visualization"
-            ReferencedContainer = "container:DCHP Visualization.xcodeproj">
+            BuildableName = "DHCP Visualization.app"
+            BlueprintName = "DHCP Visualization"
+            ReferencedContainer = "container:DHCP Visualization.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E6C8929B18677300008D3C6B"
-            BuildableName = "DCHP Visualization.app"
-            BlueprintName = "DCHP Visualization"
-            ReferencedContainer = "container:DCHP Visualization.xcodeproj">
+            BuildableName = "DHCP Visualization.app"
+            BlueprintName = "DHCP Visualization"
+            ReferencedContainer = "container:DHCP Visualization.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E6C8929B18677300008D3C6B"
-            BuildableName = "DCHP Visualization.app"
-            BlueprintName = "DCHP Visualization"
-            ReferencedContainer = "container:DCHP Visualization.xcodeproj">
+            BuildableName = "DHCP Visualization.app"
+            BlueprintName = "DHCP Visualization"
+            ReferencedContainer = "container:DHCP Visualization.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
