@@ -9,14 +9,11 @@
 #import "CountryDataProvider.h"
 #import "Country.h"
 
-#ifndef BaseImageUrl
-#define BaseImageUrl @"http://wareous.com/guest/country_list/"
-#endif
-
 @implementation CountryDataProvider
 
+NSString * const BaseImageUrl = @"http://wareous.com/guest/country_list/";
 
-+ (NSArray *)getCountries
++ (NSArray *)countries
 {
     NSMutableArray *result = [[NSMutableArray alloc] init];
     
@@ -29,8 +26,8 @@
         
         Country *country = [[Country alloc] init];
         
-        country.Name = [parts objectAtIndex:0];
-        country.ImageUrl = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", BaseImageUrl, item]];
+        country.name = [parts objectAtIndex:0];
+        country.imageUrl = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", BaseImageUrl, item]];
         
         [result addObject:country];
     }

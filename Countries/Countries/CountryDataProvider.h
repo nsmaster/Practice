@@ -10,6 +10,6 @@
 
 @interface CountryDataProvider : NSObject
 
-+ (NSArray *)getCountries;
++ (NSArray *)countries;
 
 @end

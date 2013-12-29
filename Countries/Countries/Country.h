@@ -10,10 +10,10 @@
 
 @interface Country : NSObject
 
-@property (nonatomic, strong) NSString *Name;
+@property (nonatomic, strong) NSString *name;
 
-@property (nonatomic, strong) NSURL *ImageUrl;
+@property (nonatomic, strong) NSURL *imageUrl;
 
-@property (strong) UIImage *Image;
+@property (strong) UIImage *image;
 
 @end

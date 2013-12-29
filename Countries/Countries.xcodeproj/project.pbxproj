@@ -24,6 +24,7 @@
 		E6824E73185B31F00051AA2E /* countries.plist in Resources */ = {isa = PBXBuildFile; fileRef = E6824E72185B31F00051AA2E /* countries.plist */; };
 		E6824E76185B32D40051AA2E /* Country.m in Sources */ = {isa = PBXBuildFile; fileRef = E6824E75185B32D40051AA2E /* Country.m */; };
 		E6824E79185B32FB0051AA2E /* CountryDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = E6824E78185B32FB0051AA2E /* CountryDataProvider.m */; };
+		E69B8B88186F982A009EBD5D /* defaultFlag.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E69B8B87186F982A009EBD5D /* defaultFlag.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		E6824E75185B32D40051AA2E /* Country.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Country.m; sourceTree = "<group>"; };
 		E6824E77185B32FB0051AA2E /* CountryDataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountryDataProvider.h; sourceTree = "<group>"; };
 		E6824E78185B32FB0051AA2E /* CountryDataProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountryDataProvider.m; sourceTree = "<group>"; };
+		E69B8B87186F982A009EBD5D /* defaultFlag.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = defaultFlag.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 		E6824E44185B30450051AA2E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E69B8B87186F982A009EBD5D /* defaultFlag.jpg */,
 				E6824E45185B30450051AA2E /* Countries-Info.plist */,
 				E6824E46185B30450051AA2E /* InfoPlist.strings */,
 				E6824E49185B30450051AA2E /* main.m */,
@@ -243,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6824E56185B30450051AA2E /* Images.xcassets in Resources */,
+				E69B8B88186F982A009EBD5D /* defaultFlag.jpg in Resources */,
 				E6824E73185B31F00051AA2E /* countries.plist in Resources */,
 				E6824E48185B30450051AA2E /* InfoPlist.strings in Resources */,
 				E6824E51185B30450051AA2E /* Main.storyboard in Resources */,

@@ -12,6 +12,8 @@
 
 @property (nonatomic, strong) NSArray *countries;
 
+@property (nonatomic, strong) NSOperationQueue *operationQueue;
+
 @end
 
 @implementation ViewController
@@ -20,7 +22,8 @@
 {
     [super viewDidLoad];
 	
-    self.countries = [CountryDataProvider getCountries];
+    self.countries = [CountryDataProvider countries];
+    self.operationQueue = [[NSOperationQueue alloc] init];
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,17 +51,24 @@
     
     Country *country = [self.countries objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = country.Name;
-    cell.imageView.image = nil;
+    cell.textLabel.text = country.name;
     
-    if(country.Image) {
-        cell.imageView.image = country.Image;
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"defaultFlag" ofType:@"jpg"];
+    
+    cell.imageView.image = [[UIImage alloc] initWithData:[[NSData alloc] initWithContentsOfFile:path]];
+    
+    if(country.image) {
+        cell.imageView.image = country.image;
     } else {
-        NSBlockOperation* blockOperation = [NSBlockOperation blockOperationWithBlock:^{
-            country.Image = [UIImage imageWithData:[NSData dataWithContentsOfURL:country.ImageUrl]];
-            [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        [self.operationQueue addOperationWithBlock:^{
+            country.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:country.imageUrl]];
+            
+            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                if([tableView.indexPathsForVisibleRows containsObject:indexPath]) {
+                    [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+                }
+            }];
         }];
-        [[NSOperationQueue mainQueue] addOperation:blockOperation];
     }
     
     return cell;
