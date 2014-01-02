@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "CellBlockOperation.h"
 
 @interface ViewController ()
 
@@ -18,18 +19,29 @@
 
 @implementation ViewController
 
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if(self) {
+        self.operationQueue = [[NSOperationQueue alloc] init];
+        [self.operationQueue setMaxConcurrentOperationCount:5];
+    }
+    
+    return self;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	
     self.countries = [CountryDataProvider countries];
-    self.operationQueue = [[NSOperationQueue alloc] init];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    self.countries = nil;
 }
 
 #pragma mark - TableView
@@ -52,23 +64,34 @@
     Country *country = [self.countries objectAtIndex:indexPath.row];
     
     cell.textLabel.text = country.name;
-    
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"defaultFlag" ofType:@"jpg"];
-    
-    cell.imageView.image = [[UIImage alloc] initWithData:[[NSData alloc] initWithContentsOfFile:path]];
+    cell.imageView.image = [UIImage imageNamed:@"defaultFlag.jpg"];
     
     if(country.image) {
         cell.imageView.image = country.image;
     } else {
-        [self.operationQueue addOperationWithBlock:^{
-            country.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:country.imageUrl]];
+        BOOL operationWasAdded = NO;
+        
+        for (CellBlockOperation *operation in self.operationQueue.operations) {
+            if([tableView.indexPathsForVisibleRows containsObject:operation.indexPath] == NO) {
+                [operation cancel];
+            }
             
-            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                if([tableView.indexPathsForVisibleRows containsObject:indexPath]) {
-                    [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-                }
-            }];
-        }];
+            if(operation.indexPath == indexPath && operation.isCancelled == NO) {
+                operationWasAdded = YES;
+            }
+        }
+        
+        if(!operationWasAdded) {
+            [self.operationQueue addOperation:[[CellBlockOperation alloc] initWithIndexPath:indexPath block:^{
+                country.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:country.imageUrl]];
+            
+                [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                    if([tableView.indexPathsForVisibleRows containsObject:indexPath]) {
+                        [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+                    }
+                }];
+            }]];
+        }
     }
     
     return cell;
