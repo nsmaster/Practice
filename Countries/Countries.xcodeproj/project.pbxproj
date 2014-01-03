@@ -25,7 +25,7 @@
 		E6824E76185B32D40051AA2E /* Country.m in Sources */ = {isa = PBXBuildFile; fileRef = E6824E75185B32D40051AA2E /* Country.m */; };
 		E6824E79185B32FB0051AA2E /* CountryDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = E6824E78185B32FB0051AA2E /* CountryDataProvider.m */; };
 		E69B8B88186F982A009EBD5D /* defaultFlag.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E69B8B87186F982A009EBD5D /* defaultFlag.jpg */; };
-		E69B8B8B18759F00009EBD5D /* CellBlockOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E69B8B8A18759F00009EBD5D /* CellBlockOperation.m */; };
+		E69B8B8B18759F00009EBD5D /* LoadFlagOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E69B8B8A18759F00009EBD5D /* LoadFlagOperation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,8 +64,8 @@
 		E6824E77185B32FB0051AA2E /* CountryDataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountryDataProvider.h; sourceTree = "<group>"; };
 		E6824E78185B32FB0051AA2E /* CountryDataProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountryDataProvider.m; sourceTree = "<group>"; };
 		E69B8B87186F982A009EBD5D /* defaultFlag.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = defaultFlag.jpg; sourceTree = "<group>"; };
-		E69B8B8918759F00009EBD5D /* CellBlockOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellBlockOperation.h; sourceTree = "<group>"; };
-		E69B8B8A18759F00009EBD5D /* CellBlockOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellBlockOperation.m; sourceTree = "<group>"; };
+		E69B8B8918759F00009EBD5D /* LoadFlagOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadFlagOperation.h; sourceTree = "<group>"; };
+		E69B8B8A18759F00009EBD5D /* LoadFlagOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadFlagOperation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,8 +137,8 @@
 				E6824E75185B32D40051AA2E /* Country.m */,
 				E6824E77185B32FB0051AA2E /* CountryDataProvider.h */,
 				E6824E78185B32FB0051AA2E /* CountryDataProvider.m */,
-				E69B8B8918759F00009EBD5D /* CellBlockOperation.h */,
-				E69B8B8A18759F00009EBD5D /* CellBlockOperation.m */,
+				E69B8B8918759F00009EBD5D /* LoadFlagOperation.h */,
+				E69B8B8A18759F00009EBD5D /* LoadFlagOperation.m */,
 			);
 			path = Countries;
 			sourceTree = "<group>";
@@ -274,7 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6824E54185B30450051AA2E /* ViewController.m in Sources */,
-				E69B8B8B18759F00009EBD5D /* CellBlockOperation.m in Sources */,
+				E69B8B8B18759F00009EBD5D /* LoadFlagOperation.m in Sources */,
 				E6824E79185B32FB0051AA2E /* CountryDataProvider.m in Sources */,
 				E6824E4A185B30450051AA2E /* main.m in Sources */,
 				E6824E4E185B30450051AA2E /* AppDelegate.m in Sources */,

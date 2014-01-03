@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "CellBlockOperation.h"
+#import "LoadFlagOperation.h"
 
 @interface ViewController ()
 
@@ -15,9 +15,13 @@
 
 @property (nonatomic, strong) NSOperationQueue *operationQueue;
 
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+
 @end
 
 @implementation ViewController
+
+NSString * const CellId = @"CountryCell";
 
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
@@ -34,7 +38,7 @@
 {
     [super viewDidLoad];
 	
-    self.countries = [CountryDataProvider countries];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellId];
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,6 +46,15 @@
     [super didReceiveMemoryWarning];
     
     self.countries = nil;
+}
+
+- (NSArray *)countries
+{
+    if(!_countries) {
+        _countries = [CountryDataProvider countries];
+    }
+    
+    return _countries;
 }
 
 #pragma mark - TableView
@@ -53,13 +66,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellId = @"CountryCell";
-    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellId];
-    
-    if(!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellId];
-    }
     
     Country *country = [self.countries objectAtIndex:indexPath.row];
     
@@ -71,7 +78,8 @@
     } else {
         BOOL operationWasAdded = NO;
         
-        for (CellBlockOperation *operation in self.operationQueue.operations) {
+        NSArray *operations = [NSArray arrayWithArray:self.operationQueue.operations];
+        for (LoadFlagOperation *operation in operations) {
             if([tableView.indexPathsForVisibleRows containsObject:operation.indexPath] == NO) {
                 [operation cancel];
             }
@@ -82,12 +90,13 @@
         }
         
         if(!operationWasAdded) {
-            [self.operationQueue addOperation:[[CellBlockOperation alloc] initWithIndexPath:indexPath block:^{
+            [self.operationQueue addOperation:[[LoadFlagOperation alloc] initWithIndexPath:indexPath block:^{
                 country.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:country.imageUrl]];
             
                 [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                     if([tableView.indexPathsForVisibleRows containsObject:indexPath]) {
-                        [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+                        UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+                        cell.imageView.image = country.image;
                     }
                 }];
             }]];
@@ -96,6 +105,4 @@
     
     return cell;
 }
-
-
 @end
