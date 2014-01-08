@@ -90,14 +90,12 @@ NSString * const CellId = @"CountryCell";
         }
         
         if(!operationWasAdded) {
-            [self.operationQueue addOperation:[[LoadFlagOperation alloc] initWithIndexPath:indexPath block:^{
-                country.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:country.imageUrl]];
-            
+            [self.operationQueue addOperation:[[LoadFlagOperation alloc] initWithIndexPath:indexPath flagUrl:country.imageUrl completion:^(UIImage *image){
                 [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                    if([tableView.indexPathsForVisibleRows containsObject:indexPath]) {
-                        UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-                        cell.imageView.image = country.image;
-                    }
+                    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+                    cell.imageView.image = image;
+                    country.image = image;
+
                 }];
             }]];
         }
