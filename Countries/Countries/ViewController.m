@@ -76,7 +76,7 @@ NSString * const CellId = @"CountryCell";
     if(country.image) {
         cell.imageView.image = country.image;
     } else {
-        BOOL operationWasAdded = NO;
+        BOOL isOperationInQueue = NO;
         
         NSArray *operations = [NSArray arrayWithArray:self.operationQueue.operations];
         for (LoadFlagOperation *operation in operations) {
@@ -85,19 +85,12 @@ NSString * const CellId = @"CountryCell";
             }
             
             if(operation.indexPath == indexPath && operation.isCancelled == NO) {
-                operationWasAdded = YES;
+                isOperationInQueue = YES;
             }
         }
         
-        if(!operationWasAdded) {
-            [self.operationQueue addOperation:[[LoadFlagOperation alloc] initWithIndexPath:indexPath flagUrl:country.imageUrl completion:^(UIImage *image){
-                [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-                    cell.imageView.image = image;
-                    country.image = image;
-
-                }];
-            }]];
+        if(!isOperationInQueue) {
+            [self.operationQueue addOperation:[[LoadFlagOperation alloc] initWithIndexPath:indexPath tableView:tableView country:country]];
         }
     }
     

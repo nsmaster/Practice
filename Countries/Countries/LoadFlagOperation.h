@@ -7,13 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Country.h"
 
 @interface LoadFlagOperation : NSOperation <NSURLConnectionDataDelegate, NSURLConnectionDelegate>
 
 @property (nonatomic, strong, readonly) NSIndexPath *indexPath;
 
-- (id)initWithIndexPath:(NSIndexPath *)aIndexPath flagUrl:(NSURL *)aFlagUrl completion:(void(^)(UIImage *image))aCompletionBlock;
+@property (nonatomic, assign, readonly) BOOL isExecuting;
 
-- (id)init __attribute__((unavailable()));
+@property (nonatomic, assign, readonly) BOOL isFinished;
+
+- (id)initWithIndexPath:(NSIndexPath *)aIndexPath tableView:(UITableView *)aTableView country:(Country *)aCountry;
+
+- (id)init UNAVAILABLE_ATTRIBUTE;
 
 @end
