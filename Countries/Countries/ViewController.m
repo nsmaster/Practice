@@ -22,6 +22,7 @@
 @implementation ViewController
 
 NSString * const CellId = @"CountryCell";
+NSString * const PropertyNameIsFinished = @"isFinished";
 
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
@@ -57,6 +58,27 @@ NSString * const CellId = @"CountryCell";
     return _countries;
 }
 
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    if([object isKindOfClass:[LoadFlagOperation class]] && [keyPath isEqualToString:PropertyNameIsFinished]) {
+        LoadFlagOperation *loadFlagOperation = object;
+        
+        if(loadFlagOperation.flag) {
+            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:loadFlagOperation.indexPath];
+                cell.imageView.image = loadFlagOperation.flag;
+                
+                Country *country = [self.countries objectAtIndex:loadFlagOperation.indexPath.row];
+                country.image = loadFlagOperation.flag;
+            }];
+        }
+        
+        [object removeObserver:self forKeyPath:PropertyNameIsFinished context:nil];
+    } else {
+        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+    }
+}
+
 #pragma mark - TableView
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -90,7 +112,10 @@ NSString * const CellId = @"CountryCell";
         }
         
         if(!isOperationInQueue) {
-            [self.operationQueue addOperation:[[LoadFlagOperation alloc] initWithIndexPath:indexPath tableView:tableView country:country]];
+            LoadFlagOperation *loadFlagOperation = [[LoadFlagOperation alloc] initWithIndexPath:indexPath flagUrl:country.imageUrl];
+            [loadFlagOperation addObserver:self forKeyPath:PropertyNameIsFinished options:NSKeyValueObservingOptionNew context:nil];
+            
+            [self.operationQueue addOperation:loadFlagOperation];
         }
     }
     

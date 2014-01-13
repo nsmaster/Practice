@@ -10,14 +10,11 @@
 
 @interface LoadFlagOperation ()
 
-@property (nonatomic, strong) Country *country;
+@property (nonatomic, strong) NSURL *flagUrl;
+
+@property (nonatomic, strong) UIImage *flag;
 
 @property (nonatomic, strong) NSMutableData *receivedData;
-
-@property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, strong) NSIndexPath *indexPath;
-
-@property (nonatomic, assign) BOOL isDone;
 
 @property (nonatomic, assign) BOOL isExecuting;
 @property (nonatomic, assign) BOOL isFinished;
@@ -26,15 +23,13 @@
 
 @implementation LoadFlagOperation
 
-- (id)initWithIndexPath:(NSIndexPath *)aIndexPath tableView:(UITableView *)aTableView country:(Country *)aCountry;
+- (id)initWithIndexPath:(NSIndexPath *)aIndexPath flagUrl:(NSURL *)aFlagUrl
 {
     self = [super init];
     if(self) {
         _indexPath = aIndexPath;
-        _tableView = aTableView;
-        _country = aCountry;
+        _flagUrl = aFlagUrl;
         
-        _isDone = NO;
         _isExecuting = NO;
         _isFinished = NO;
     }
@@ -57,17 +52,14 @@
 
 - (void)main
 {
-    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:self.country.imageUrl];
+    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:self.flagUrl];
     self.receivedData = [NSMutableData dataWithCapacity: 0];
     
     [NSURLConnection connectionWithRequest:request delegate:self];
     
-    while(![self isCancelled] && !self.isDone) {
+    while(![self isCancelled] && !self.isFinished) {
         [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
     }
-    
-    self.isExecuting = NO;
-    self.isFinished = YES;
 }
 
 - (BOOL)isConcurrent
@@ -80,11 +72,17 @@
     return YES;
 }
 
+- (void)completeOperation
+{
+    self.isExecuting = NO;
+    self.isFinished = YES;
+}
+
 #pragma mark - NSURLConnection
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
-    self.isDone = YES;
+    [self completeOperation];
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
@@ -95,7 +93,7 @@
     }
     
     [connection  cancel];
-    self.isDone = YES;
+    [self completeOperation];
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
@@ -106,19 +104,13 @@
     }
 
     [connection  cancel];
-    self.isDone = YES;
+    [self completeOperation];
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
-    UIImage *image = [[UIImage alloc] initWithData:self.receivedData];
+    self.flag = [[UIImage alloc] initWithData:self.receivedData];
     
-    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-        UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:self.indexPath];
-        cell.imageView.image = image;
-        self.country.image = image;
-    }];
-    
-    self.isDone = YES;
+    [self completeOperation];
 }
 @end

@@ -13,11 +13,9 @@
 
 @property (nonatomic, strong, readonly) NSIndexPath *indexPath;
 
-@property (nonatomic, assign, readonly) BOOL isExecuting;
+@property (nonatomic, strong, readonly) UIImage *flag;
 
-@property (nonatomic, assign, readonly) BOOL isFinished;
-
-- (id)initWithIndexPath:(NSIndexPath *)aIndexPath tableView:(UITableView *)aTableView country:(Country *)aCountry;
+- (id)initWithIndexPath:(NSIndexPath *)aIndexPath flagUrl:(NSURL *)aFlagUrl;
 
 - (id)init UNAVAILABLE_ATTRIBUTE;
 
