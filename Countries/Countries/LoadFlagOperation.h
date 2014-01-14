@@ -12,7 +12,7 @@
 @interface LoadFlagOperation : NSOperation <NSURLConnectionDataDelegate, NSURLConnectionDelegate>
 
 @property (nonatomic, strong, readonly) NSIndexPath *indexPath;
-
+@property (nonatomic, strong, readonly) NSURL *flagUrl;
 @property (nonatomic, strong, readonly) UIImage *flag;
 
 - (id)initWithIndexPath:(NSIndexPath *)aIndexPath flagUrl:(NSURL *)aFlagUrl;

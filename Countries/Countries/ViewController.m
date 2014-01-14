@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "LoadFlagOperation.h"
+#import "AppDelegate.h"
+#import "LoadedImageProvider.h"
 
 @interface ViewController ()
 
@@ -15,7 +17,9 @@
 
 @property (nonatomic, strong) NSOperationQueue *operationQueue;
 
-@property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) IBOutlet UITableView *tableView;
+
+@property (nonatomic, strong) LoadedImageProvider *imageProvider;
 
 @end
 
@@ -47,6 +51,7 @@ NSString * const PropertyNameIsFinished = @"isFinished";
     [super didReceiveMemoryWarning];
     
     self.countries = nil;
+    self.imageProvider = nil;
 }
 
 - (NSArray *)countries
@@ -56,6 +61,15 @@ NSString * const PropertyNameIsFinished = @"isFinished";
     }
     
     return _countries;
+}
+
+- (LoadedImageProvider *)imageProvider
+{
+    if(!_imageProvider) {
+        _imageProvider = [[LoadedImageProvider alloc] init];
+    }
+    
+    return _imageProvider;
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
@@ -68,8 +82,7 @@ NSString * const PropertyNameIsFinished = @"isFinished";
                 UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:loadFlagOperation.indexPath];
                 cell.imageView.image = loadFlagOperation.flag;
                 
-                Country *country = [self.countries objectAtIndex:loadFlagOperation.indexPath.row];
-                country.image = loadFlagOperation.flag;
+                [self.imageProvider insertImage:loadFlagOperation.flag url:loadFlagOperation.flagUrl];
             }];
         }
         
@@ -95,8 +108,10 @@ NSString * const PropertyNameIsFinished = @"isFinished";
     cell.textLabel.text = country.name;
     cell.imageView.image = [UIImage imageNamed:@"defaultFlag.jpg"];
     
-    if(country.image) {
-        cell.imageView.image = country.image;
+    UIImage *flag = [self.imageProvider imageFromUrl:country.imageUrl];
+    
+    if(flag) {
+        cell.imageView.image = flag;
     } else {
         BOOL isOperationInQueue = NO;
         

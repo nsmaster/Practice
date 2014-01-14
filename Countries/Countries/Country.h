@@ -14,6 +14,4 @@
 
 @property (nonatomic, strong) NSURL *imageUrl;
 
-@property (strong) UIImage *image;
-
 @end

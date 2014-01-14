@@ -11,7 +11,6 @@
 @interface LoadFlagOperation ()
 
 @property (nonatomic, strong) NSURL *flagUrl;
-
 @property (nonatomic, strong) UIImage *flag;
 
 @property (nonatomic, strong) NSMutableData *receivedData;

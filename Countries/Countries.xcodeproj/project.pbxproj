@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E67D9375188490450091E8C8 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E67D9373188490450091E8C8 /* Model.xcdatamodeld */; };
+		E67D9377188490660091E8C8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E67D9376188490660091E8C8 /* CoreData.framework */; };
+		E67D937A1885672A0091E8C8 /* LoadedImageProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = E67D93791885672A0091E8C8 /* LoadedImageProvider.m */; };
 		E6824E3E185B30450051AA2E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6824E3D185B30450051AA2E /* Foundation.framework */; };
 		E6824E40185B30450051AA2E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6824E3F185B30450051AA2E /* CoreGraphics.framework */; };
 		E6824E42185B30450051AA2E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6824E41185B30450051AA2E /* UIKit.framework */; };
@@ -39,6 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E67D9374188490450091E8C8 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		E67D9376188490660091E8C8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		E67D93781885672A0091E8C8 /* LoadedImageProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadedImageProvider.h; sourceTree = "<group>"; };
+		E67D93791885672A0091E8C8 /* LoadedImageProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadedImageProvider.m; sourceTree = "<group>"; };
 		E6824E3A185B30450051AA2E /* Countries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Countries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6824E3D185B30450051AA2E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E6824E3F185B30450051AA2E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -73,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E67D9377188490660091E8C8 /* CoreData.framework in Frameworks */,
 				E6824E40185B30450051AA2E /* CoreGraphics.framework in Frameworks */,
 				E6824E42185B30450051AA2E /* UIKit.framework in Frameworks */,
 				E6824E3E185B30450051AA2E /* Foundation.framework in Frameworks */,
@@ -114,6 +122,7 @@
 		E6824E3C185B30450051AA2E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E67D9376188490660091E8C8 /* CoreData.framework */,
 				E6824E3D185B30450051AA2E /* Foundation.framework */,
 				E6824E3F185B30450051AA2E /* CoreGraphics.framework */,
 				E6824E41185B30450051AA2E /* UIKit.framework */,
@@ -125,12 +134,13 @@
 		E6824E43185B30450051AA2E /* Countries */ = {
 			isa = PBXGroup;
 			children = (
-				E6824E72185B31F00051AA2E /* countries.plist */,
 				E6824E4C185B30450051AA2E /* AppDelegate.h */,
 				E6824E4D185B30450051AA2E /* AppDelegate.m */,
 				E6824E4F185B30450051AA2E /* Main.storyboard */,
 				E6824E52185B30450051AA2E /* ViewController.h */,
 				E6824E53185B30450051AA2E /* ViewController.m */,
+				E6824E72185B31F00051AA2E /* countries.plist */,
+				E67D9373188490450091E8C8 /* Model.xcdatamodeld */,
 				E6824E55185B30450051AA2E /* Images.xcassets */,
 				E6824E44185B30450051AA2E /* Supporting Files */,
 				E6824E74185B32D40051AA2E /* Country.h */,
@@ -139,6 +149,8 @@
 				E6824E78185B32FB0051AA2E /* CountryDataProvider.m */,
 				E69B8B8918759F00009EBD5D /* LoadFlagOperation.h */,
 				E69B8B8A18759F00009EBD5D /* LoadFlagOperation.m */,
+				E67D93781885672A0091E8C8 /* LoadedImageProvider.h */,
+				E67D93791885672A0091E8C8 /* LoadedImageProvider.m */,
 			);
 			path = Countries;
 			sourceTree = "<group>";
@@ -276,9 +288,11 @@
 				E6824E54185B30450051AA2E /* ViewController.m in Sources */,
 				E69B8B8B18759F00009EBD5D /* LoadFlagOperation.m in Sources */,
 				E6824E79185B32FB0051AA2E /* CountryDataProvider.m in Sources */,
+				E67D9375188490450091E8C8 /* Model.xcdatamodeld in Sources */,
 				E6824E4A185B30450051AA2E /* main.m in Sources */,
 				E6824E4E185B30450051AA2E /* AppDelegate.m in Sources */,
 				E6824E76185B32D40051AA2E /* Country.m in Sources */,
+				E67D937A1885672A0091E8C8 /* LoadedImageProvider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,6 +513,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E67D9373188490450091E8C8 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E67D9374188490450091E8C8 /* Model.xcdatamodel */,
+			);
+			currentVersion = E67D9374188490450091E8C8 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E6824E32185B30450051AA2E /* Project object */;
 }
