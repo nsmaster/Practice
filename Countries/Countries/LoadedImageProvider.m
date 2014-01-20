@@ -9,6 +9,7 @@
 #import "LoadedImageProvider.h"
 #import "AppDelegate.h"
 #import <UIKit/UIKit.h>
+#import "LoadedImage.h"
 
 @interface LoadedImageProvider()
 
@@ -37,8 +38,8 @@
     NSArray *result = [self.managedObjectContext executeFetchRequest:request error:nil];
     
     if([result count] != 0) {
-        NSManagedObject *loadedImage = [result firstObject];
-        return [[UIImage alloc] initWithData:[loadedImage valueForKey:@"image"]];
+        LoadedImage *loadedImage = [result firstObject];
+        return [[UIImage alloc] initWithData:loadedImage.image];
     }
     
     return nil;
@@ -46,10 +47,10 @@
 
 - (void)storeImage:(NSData *)imageData URL:(NSURL *)url
 {
-    NSManagedObject *loadedImage = [NSEntityDescription insertNewObjectForEntityForName:@"LoadedImage" inManagedObjectContext:self.managedObjectContext];
+    LoadedImage *loadedImage = [NSEntityDescription insertNewObjectForEntityForName:@"LoadedImage" inManagedObjectContext:self.managedObjectContext];
     
-    [loadedImage setValue:[url absoluteString] forKey:@"imageUrl"];
-    [loadedImage setValue:imageData forKey:@"image"];
+    loadedImage.imageUrl = [url absoluteString];
+    loadedImage.image = imageData;
     
     [self saveContext];
 }

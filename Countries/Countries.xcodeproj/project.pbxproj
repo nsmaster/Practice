@@ -29,6 +29,7 @@
 		E6824E79185B32FB0051AA2E /* CountryDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = E6824E78185B32FB0051AA2E /* CountryDataProvider.m */; };
 		E69B8B88186F982A009EBD5D /* defaultFlag.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E69B8B87186F982A009EBD5D /* defaultFlag.jpg */; };
 		E69B8B8B18759F00009EBD5D /* LoadFlagOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E69B8B8A18759F00009EBD5D /* LoadFlagOperation.m */; };
+		E6C16D0A188DC66600AE1F26 /* LoadedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C16D09188DC66600AE1F26 /* LoadedImage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,8 @@
 		E69B8B87186F982A009EBD5D /* defaultFlag.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = defaultFlag.jpg; sourceTree = "<group>"; };
 		E69B8B8918759F00009EBD5D /* LoadFlagOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadFlagOperation.h; sourceTree = "<group>"; };
 		E69B8B8A18759F00009EBD5D /* LoadFlagOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadFlagOperation.m; sourceTree = "<group>"; };
+		E6C16D08188DC66600AE1F26 /* LoadedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadedImage.h; sourceTree = "<group>"; };
+		E6C16D09188DC66600AE1F26 /* LoadedImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadedImage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +154,8 @@
 				E69B8B8A18759F00009EBD5D /* LoadFlagOperation.m */,
 				E67D93781885672A0091E8C8 /* LoadedImageProvider.h */,
 				E67D93791885672A0091E8C8 /* LoadedImageProvider.m */,
+				E6C16D08188DC66600AE1F26 /* LoadedImage.h */,
+				E6C16D09188DC66600AE1F26 /* LoadedImage.m */,
 			);
 			path = Countries;
 			sourceTree = "<group>";
@@ -286,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6824E54185B30450051AA2E /* ViewController.m in Sources */,
+				E6C16D0A188DC66600AE1F26 /* LoadedImage.m in Sources */,
 				E69B8B8B18759F00009EBD5D /* LoadFlagOperation.m in Sources */,
 				E6824E79185B32FB0051AA2E /* CountryDataProvider.m in Sources */,
 				E67D9375188490450091E8C8 /* Model.xcdatamodeld in Sources */,
