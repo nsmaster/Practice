@@ -8,11 +8,15 @@
 
 #import "AppDelegate.h"
 
-@implementation AppDelegate
+@interface AppDelegate ()
 
-@synthesize managedObjectContext = _managedObjectContext;
-@synthesize managedObjectModel = _managedObjectModel;
-@synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
+@property (nonatomic, strong, readwrite) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, strong, readwrite) NSManagedObjectModel *managedObjectModel;
+@property (nonatomic, strong, readwrite) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+
+@end
+
+@implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -72,7 +76,7 @@
 - (NSPersistentStoreCoordinator *)persistentStoreCoordinator
 {
     if(!_persistentStoreCoordinator) {
-        NSURL *storeUrl = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"flags.sqlite"];
+        NSURL *storeUrl = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"Countries.sqlite"];
         
         NSError *error = nil;
         

@@ -14,8 +14,6 @@
 
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 
-@property (nonatomic, strong) NSEntityDescription *entity;
-
 @end
 
 @implementation LoadedImageProvider
@@ -25,35 +23,33 @@
     self = [super init];
     if(self) {
         _managedObjectContext = ((AppDelegate *)[[UIApplication sharedApplication] delegate]).managedObjectContext;
-        _entity = [NSEntityDescription entityForName:@"LoadedImage" inManagedObjectContext:_managedObjectContext];
     }
     
     return self;
 }
 
-- (UIImage *)imageFromUrl:(NSURL *)url
+- (UIImage *)imageFromURL:(NSURL *)url
 {
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"LoadedImage"];
     
-    [request setEntity:self.entity];
     [request setPredicate:[NSPredicate predicateWithFormat:@"imageUrl == %@", [url absoluteString]]];
     
     NSArray *result = [self.managedObjectContext executeFetchRequest:request error:nil];
     
     if([result count] != 0) {
-        NSManagedObject *loadedImage = [result objectAtIndex:0];
+        NSManagedObject *loadedImage = [result firstObject];
         return [[UIImage alloc] initWithData:[loadedImage valueForKey:@"image"]];
     }
     
     return nil;
 }
 
-- (void)insertImage:(UIImage *)image url:(NSURL *)url
+- (void)storeImage:(NSData *)imageData URL:(NSURL *)url
 {
-    NSManagedObject *loadedImage = [NSEntityDescription insertNewObjectForEntityForName:[self.entity name] inManagedObjectContext:self.managedObjectContext];
+    NSManagedObject *loadedImage = [NSEntityDescription insertNewObjectForEntityForName:@"LoadedImage" inManagedObjectContext:self.managedObjectContext];
     
     [loadedImage setValue:[url absoluteString] forKey:@"imageUrl"];
-    [loadedImage setValue:UIImagePNGRepresentation(image) forKey:@"image"];
+    [loadedImage setValue:imageData forKey:@"image"];
     
     [self saveContext];
 }

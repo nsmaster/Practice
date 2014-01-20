@@ -12,10 +12,8 @@
 @interface LoadFlagOperation : NSOperation <NSURLConnectionDataDelegate, NSURLConnectionDelegate>
 
 @property (nonatomic, strong, readonly) NSIndexPath *indexPath;
-@property (nonatomic, strong, readonly) NSURL *flagUrl;
-@property (nonatomic, strong, readonly) UIImage *flag;
 
-- (id)initWithIndexPath:(NSIndexPath *)aIndexPath flagUrl:(NSURL *)aFlagUrl;
+- (id)initWithIndexPath:(NSIndexPath *)aIndexPath flagURL:(NSURL *)aFlagURL completionBlock:(void(^)(NSData *data))aCompletionBlock;
 
 - (id)init UNAVAILABLE_ATTRIBUTE;
 

@@ -10,8 +10,8 @@
 
 @interface LoadedImageProvider : NSObject
 
-- (UIImage *)imageFromUrl:(NSURL *)url;
+- (UIImage *)imageFromURL:(NSURL *)url;
 
-- (void)insertImage:(UIImage *)image url:(NSURL *)url;
+- (void)storeImage:(NSData *)imageData URL:(NSURL *)url;
 
 @end

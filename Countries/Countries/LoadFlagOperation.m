@@ -11,26 +11,25 @@
 @interface LoadFlagOperation ()
 
 @property (nonatomic, strong) NSURL *flagUrl;
-@property (nonatomic, strong) UIImage *flag;
+@property (nonatomic, copy) void(^completion)(NSData *);
 
+@property (nonatomic, strong) NSURLConnection *connection;
 @property (nonatomic, strong) NSMutableData *receivedData;
 
-@property (nonatomic, assign) BOOL isExecuting;
-@property (nonatomic, assign) BOOL isFinished;
+@property (atomic, assign, getter = isExecuting) BOOL executing;
+@property (atomic, assign, getter = isFinished) BOOL finished;
 
 @end
 
 @implementation LoadFlagOperation
 
-- (id)initWithIndexPath:(NSIndexPath *)aIndexPath flagUrl:(NSURL *)aFlagUrl
+- (id)initWithIndexPath:(NSIndexPath *)aIndexPath flagURL:(NSURL *)aFlagURL completionBlock:(void(^)(NSData *data))aCompletionBlock
 {
     self = [super init];
     if(self) {
         _indexPath = aIndexPath;
-        _flagUrl = aFlagUrl;
-        
-        _isExecuting = NO;
-        _isFinished = NO;
+        _flagUrl = aFlagURL;
+        _completion = [aCompletionBlock copy];
     }
     
     return self;
@@ -40,41 +39,26 @@
 {
     if ([self isCancelled])
     {
-        self.isFinished = YES;
+        self.finished = YES;
         return;
     }
     
-    self.isExecuting = YES;
+    self.executing = YES;
     
-    [NSThread detachNewThreadSelector:@selector(main) toTarget:self withObject:nil];
-}
-
-- (void)main
-{
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:self.flagUrl];
     self.receivedData = [NSMutableData dataWithCapacity: 0];
     
-    [NSURLConnection connectionWithRequest:request delegate:self];
+    self.connection = [NSURLConnection connectionWithRequest:request delegate:self];
     
-    while(![self isCancelled] && !self.isFinished) {
+    while(!self.isFinished) {
         [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate distantFuture]];
     }
 }
 
-- (BOOL)isConcurrent
-{
-    return YES;
-}
-
-+ (BOOL)automaticallyNotifiesObserversForKey: (NSString*) key
-{
-    return YES;
-}
-
 - (void)completeOperation
 {
-    self.isExecuting = NO;
-    self.isFinished = YES;
+    self.executing = NO;
+    self.finished = YES;
 }
 
 #pragma mark - NSURLConnection
@@ -108,8 +92,12 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
-    self.flag = [[UIImage alloc] initWithData:self.receivedData];
-    
     [self completeOperation];
+    
+    if(self.completion) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.completion(self.receivedData);
+        });
+    }
 }
 @end

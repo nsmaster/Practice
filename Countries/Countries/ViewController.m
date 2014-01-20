@@ -26,7 +26,6 @@
 @implementation ViewController
 
 NSString * const CellId = @"CountryCell";
-NSString * const PropertyNameIsFinished = @"isFinished";
 
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
@@ -72,26 +71,6 @@ NSString * const PropertyNameIsFinished = @"isFinished";
     return _imageProvider;
 }
 
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
-{
-    if([object isKindOfClass:[LoadFlagOperation class]] && [keyPath isEqualToString:PropertyNameIsFinished]) {
-        LoadFlagOperation *loadFlagOperation = object;
-        
-        if(loadFlagOperation.flag) {
-            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:loadFlagOperation.indexPath];
-                cell.imageView.image = loadFlagOperation.flag;
-                
-                [self.imageProvider insertImage:loadFlagOperation.flag url:loadFlagOperation.flagUrl];
-            }];
-        }
-        
-        [object removeObserver:self forKeyPath:PropertyNameIsFinished context:nil];
-    } else {
-        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
-    }
-}
-
 #pragma mark - TableView
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -108,7 +87,7 @@ NSString * const PropertyNameIsFinished = @"isFinished";
     cell.textLabel.text = country.name;
     cell.imageView.image = [UIImage imageNamed:@"defaultFlag.jpg"];
     
-    UIImage *flag = [self.imageProvider imageFromUrl:country.imageUrl];
+    UIImage *flag = [self.imageProvider imageFromURL:country.imageUrl];
     
     if(flag) {
         cell.imageView.image = flag;
@@ -127,10 +106,12 @@ NSString * const PropertyNameIsFinished = @"isFinished";
         }
         
         if(!isOperationInQueue) {
-            LoadFlagOperation *loadFlagOperation = [[LoadFlagOperation alloc] initWithIndexPath:indexPath flagUrl:country.imageUrl];
-            [loadFlagOperation addObserver:self forKeyPath:PropertyNameIsFinished options:NSKeyValueObservingOptionNew context:nil];
-            
-            [self.operationQueue addOperation:loadFlagOperation];
+            [self.operationQueue addOperation:[[LoadFlagOperation alloc] initWithIndexPath:indexPath flagURL:country.imageUrl completionBlock:^(NSData *data) {
+                UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+                cell.imageView.image = [UIImage imageWithData:data];
+                
+                [self.imageProvider storeImage:data URL:country.imageUrl];
+            }]];
         }
     }
     
