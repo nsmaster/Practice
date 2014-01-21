@@ -12,7 +12,7 @@
 
 @interface LoadedImage : NSManagedObject
 
-@property (nonatomic, retain) NSData * image;
+@property (nonatomic, retain) NSData * imageData;
 @property (nonatomic, retain) NSString * imageUrl;
 
 @end

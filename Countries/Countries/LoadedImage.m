@@ -11,7 +11,7 @@
 
 @implementation LoadedImage
 
-@dynamic image;
+@dynamic imageData;
 @dynamic imageUrl;
 
 @end

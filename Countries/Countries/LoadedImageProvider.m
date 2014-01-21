@@ -39,7 +39,7 @@
     
     if([result count] != 0) {
         LoadedImage *loadedImage = [result firstObject];
-        return [[UIImage alloc] initWithData:loadedImage.image];
+        return [[UIImage alloc] initWithData:loadedImage.imageData];
     }
     
     return nil;
@@ -50,7 +50,7 @@
     LoadedImage *loadedImage = [NSEntityDescription insertNewObjectForEntityForName:@"LoadedImage" inManagedObjectContext:self.managedObjectContext];
     
     loadedImage.imageUrl = [url absoluteString];
-    loadedImage.image = imageData;
+    loadedImage.imageData = imageData;
     
     [self saveContext];
 }
