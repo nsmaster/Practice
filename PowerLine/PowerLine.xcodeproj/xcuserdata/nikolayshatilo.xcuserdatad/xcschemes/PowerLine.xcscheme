@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E61926F7192DE77000A523B0"
-               BuildableName = "FamilyBudget.app"
-               BlueprintName = "FamilyBudget"
-               ReferencedContainer = "container:FamilyBudget.xcodeproj">
+               BlueprintIdentifier = "E696A80E19CA185300CD404D"
+               BuildableName = "PowerLine.app"
+               BlueprintName = "PowerLine"
+               ReferencedContainer = "container:PowerLine.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,20 +32,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E6192723192DE77000A523B0"
-               BuildableName = "FamilyBudgetTests.xctest"
-               BlueprintName = "FamilyBudgetTests"
-               ReferencedContainer = "container:FamilyBudget.xcodeproj">
+               BlueprintIdentifier = "E696A83A19CA185400CD404D"
+               BuildableName = "PowerLineTests.xctest"
+               BlueprintName = "PowerLineTests"
+               ReferencedContainer = "container:PowerLine.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E61926F7192DE77000A523B0"
-            BuildableName = "FamilyBudget.app"
-            BlueprintName = "FamilyBudget"
-            ReferencedContainer = "container:FamilyBudget.xcodeproj">
+            BlueprintIdentifier = "E696A80E19CA185300CD404D"
+            BuildableName = "PowerLine.app"
+            BlueprintName = "PowerLine"
+            ReferencedContainer = "container:PowerLine.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -61,18 +61,12 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E61926F7192DE77000A523B0"
-            BuildableName = "FamilyBudget.app"
-            BlueprintName = "FamilyBudget"
-            ReferencedContainer = "container:FamilyBudget.xcodeproj">
+            BlueprintIdentifier = "E696A80E19CA185300CD404D"
+            BuildableName = "PowerLine.app"
+            BlueprintName = "PowerLine"
+            ReferencedContainer = "container:PowerLine.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <CommandLineArguments>
-         <CommandLineArgument
-            argument = "-com.apple.CoreData.SQLDebug 1"
-            isEnabled = "NO">
-         </CommandLineArgument>
-      </CommandLineArguments>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -85,10 +79,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E61926F7192DE77000A523B0"
-            BuildableName = "FamilyBudget.app"
-            BlueprintName = "FamilyBudget"
-            ReferencedContainer = "container:FamilyBudget.xcodeproj">
+            BlueprintIdentifier = "E696A80E19CA185300CD404D"
+            BuildableName = "PowerLine.app"
+            BlueprintName = "PowerLine"
+            ReferencedContainer = "container:PowerLine.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -26,6 +26,11 @@
 		E6192733192DE77000A523B0 /* FamilyBudgetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6192732192DE77000A523B0 /* FamilyBudgetTests.m */; };
 		E681BDDC192E8C2700C0AF29 /* AdditionItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E681BDDB192E8C2700C0AF29 /* AdditionItemViewController.m */; };
 		E681BDE0192F385500C0AF29 /* FamilyBudget.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E681BDDE192F385500C0AF29 /* FamilyBudget.xcdatamodeld */; };
+		E681BDE3192F429A00C0AF29 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E681BDE2192F429A00C0AF29 /* SettingsViewController.m */; };
+		E681BDE6192F7D2800C0AF29 /* CostGroupListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E681BDE5192F7D2800C0AF29 /* CostGroupListViewController.m */; };
+		E681BDEB192F811100C0AF29 /* CostGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = E681BDEA192F811100C0AF29 /* CostGroup.m */; };
+		E681BDEF192F931800C0AF29 /* CostGroupItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E681BDEE192F931800C0AF29 /* CostGroupItemViewController.m */; };
+		E69C8FBC198A8D1900C31527 /* CostGroupManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E69C8FBB198A8D1900C31527 /* CostGroupManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +68,16 @@
 		E681BDDA192E8C2700C0AF29 /* AdditionItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdditionItemViewController.h; sourceTree = "<group>"; };
 		E681BDDB192E8C2700C0AF29 /* AdditionItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdditionItemViewController.m; sourceTree = "<group>"; };
 		E681BDDF192F385500C0AF29 /* FamilyBudget.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FamilyBudget.xcdatamodel; sourceTree = "<group>"; };
+		E681BDE1192F429A00C0AF29 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		E681BDE2192F429A00C0AF29 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		E681BDE4192F7D2800C0AF29 /* CostGroupListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CostGroupListViewController.h; sourceTree = "<group>"; };
+		E681BDE5192F7D2800C0AF29 /* CostGroupListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CostGroupListViewController.m; sourceTree = "<group>"; };
+		E681BDE9192F811100C0AF29 /* CostGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CostGroup.h; sourceTree = "<group>"; };
+		E681BDEA192F811100C0AF29 /* CostGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CostGroup.m; sourceTree = "<group>"; };
+		E681BDED192F931800C0AF29 /* CostGroupItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CostGroupItemViewController.h; sourceTree = "<group>"; };
+		E681BDEE192F931800C0AF29 /* CostGroupItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CostGroupItemViewController.m; sourceTree = "<group>"; };
+		E69C8FBA198A8D1900C31527 /* CostGroupManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CostGroupManager.h; sourceTree = "<group>"; };
+		E69C8FBB198A8D1900C31527 /* CostGroupManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CostGroupManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +140,9 @@
 		E6192703192DE77000A523B0 /* FamilyBudget */ = {
 			isa = PBXGroup;
 			children = (
+				E681BDE8192F80E600C0AF29 /* DataObjects */,
+				E681BDE7192F7D3800C0AF29 /* Controllers */,
+				E681BDEC192F8F9500C0AF29 /* Providers */,
 				E619270C192DE77000A523B0 /* AppDelegate.h */,
 				E619270D192DE77000A523B0 /* AppDelegate.m */,
 				E619270F192DE77000A523B0 /* Main_iPhone.storyboard */,
@@ -134,8 +152,6 @@
 				E681BDDE192F385500C0AF29 /* FamilyBudget.xcdatamodeld */,
 				E619271E192DE77000A523B0 /* Images.xcassets */,
 				E6192704192DE77000A523B0 /* Supporting Files */,
-				E681BDDA192E8C2700C0AF29 /* AdditionItemViewController.h */,
-				E681BDDB192E8C2700C0AF29 /* AdditionItemViewController.m */,
 			);
 			path = FamilyBudget;
 			sourceTree = "<group>";
@@ -167,6 +183,47 @@
 				E619272F192DE77000A523B0 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E681BDE7192F7D3800C0AF29 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E69C8FB9198A8C3D00C31527 /* Settings */,
+				E681BDDA192E8C2700C0AF29 /* AdditionItemViewController.h */,
+				E681BDDB192E8C2700C0AF29 /* AdditionItemViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		E681BDE8192F80E600C0AF29 /* DataObjects */ = {
+			isa = PBXGroup;
+			children = (
+				E681BDE9192F811100C0AF29 /* CostGroup.h */,
+				E681BDEA192F811100C0AF29 /* CostGroup.m */,
+			);
+			name = DataObjects;
+			sourceTree = "<group>";
+		};
+		E681BDEC192F8F9500C0AF29 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				E69C8FBA198A8D1900C31527 /* CostGroupManager.h */,
+				E69C8FBB198A8D1900C31527 /* CostGroupManager.m */,
+			);
+			name = Providers;
+			sourceTree = "<group>";
+		};
+		E69C8FB9198A8C3D00C31527 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				E681BDE1192F429A00C0AF29 /* SettingsViewController.h */,
+				E681BDE2192F429A00C0AF29 /* SettingsViewController.m */,
+				E681BDE4192F7D2800C0AF29 /* CostGroupListViewController.h */,
+				E681BDE5192F7D2800C0AF29 /* CostGroupListViewController.m */,
+				E681BDED192F931800C0AF29 /* CostGroupItemViewController.h */,
+				E681BDEE192F931800C0AF29 /* CostGroupItemViewController.m */,
+			);
+			name = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,10 +325,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				E681BDE0192F385500C0AF29 /* FamilyBudget.xcdatamodeld in Sources */,
+				E681BDEF192F931800C0AF29 /* CostGroupItemViewController.m in Sources */,
 				E619271A192DE77000A523B0 /* MasterViewController.m in Sources */,
 				E681BDDC192E8C2700C0AF29 /* AdditionItemViewController.m in Sources */,
+				E69C8FBC198A8D1900C31527 /* CostGroupManager.m in Sources */,
+				E681BDE3192F429A00C0AF29 /* SettingsViewController.m in Sources */,
+				E681BDEB192F811100C0AF29 /* CostGroup.m in Sources */,
 				E619270E192DE77000A523B0 /* AppDelegate.m in Sources */,
 				E619270A192DE77000A523B0 /* main.m in Sources */,
+				E681BDE6192F7D2800C0AF29 /* CostGroupListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

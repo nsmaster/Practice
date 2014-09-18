@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F1F64334-D6DB-4756-84CF-DD5DEE4052DB</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PowerLine</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>7A5C941ED44F334BAD44FF8430D281DC6A17F08E</key>
+		<string>https://github.com/nsmaster/Practice.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>PowerLine/PowerLine.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>7A5C941ED44F334BAD44FF8430D281DC6A17F08E</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/nsmaster/Practice.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>7A5C941ED44F334BAD44FF8430D281DC6A17F08E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7A5C941ED44F334BAD44FF8430D281DC6A17F08E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Practice</string>
+		</dict>
+	</array>
+</dict>
+</plist>

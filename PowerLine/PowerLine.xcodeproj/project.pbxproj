@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C0B1486EBE6F4F8CBEAE4BA4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8972049F202F41B39477661A /* libPods.a */; };
+		E60CFFAB19CA2447000D9CCF /* BaseProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = E60CFFAA19CA2447000D9CCF /* BaseProvider.m */; };
+		E60CFFAE19CA24ED000D9CCF /* UserProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = E60CFFAD19CA24EC000D9CCF /* UserProvider.m */; };
+		E60CFFB219CA2543000D9CCF /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E60CFFB119CA2543000D9CCF /* User.m */; };
+		E696A81319CA185300CD404D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E696A81219CA185300CD404D /* Foundation.framework */; };
+		E696A81519CA185300CD404D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E696A81419CA185300CD404D /* CoreGraphics.framework */; };
+		E696A81719CA185300CD404D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E696A81619CA185300CD404D /* UIKit.framework */; };
+		E696A81919CA185300CD404D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E696A81819CA185300CD404D /* CoreData.framework */; };
+		E696A81F19CA185300CD404D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E696A81D19CA185300CD404D /* InfoPlist.strings */; };
+		E696A82119CA185300CD404D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E696A82019CA185300CD404D /* main.m */; };
+		E696A82519CA185400CD404D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E696A82419CA185400CD404D /* AppDelegate.m */; };
+		E696A82819CA185400CD404D /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E696A82619CA185400CD404D /* Main_iPhone.storyboard */; };
+		E696A82B19CA185400CD404D /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E696A82919CA185400CD404D /* Main_iPad.storyboard */; };
+		E696A82E19CA185400CD404D /* PowerLine.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E696A82C19CA185400CD404D /* PowerLine.xcdatamodeld */; };
+		E696A83119CA185400CD404D /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E696A83019CA185400CD404D /* MasterViewController.m */; };
+		E696A83619CA185400CD404D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E696A83519CA185400CD404D /* Images.xcassets */; };
+		E696A83D19CA185400CD404D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E696A83C19CA185400CD404D /* XCTest.framework */; };
+		E696A83E19CA185400CD404D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E696A81219CA185300CD404D /* Foundation.framework */; };
+		E696A83F19CA185400CD404D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E696A81619CA185300CD404D /* UIKit.framework */; };
+		E696A84019CA185400CD404D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E696A81819CA185300CD404D /* CoreData.framework */; };
+		E696A84819CA185400CD404D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E696A84619CA185400CD404D /* InfoPlist.strings */; };
+		E696A84A19CA185400CD404D /* PowerLineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E696A84919CA185400CD404D /* PowerLineTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E696A84119CA185400CD404D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E696A80719CA185300CD404D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E696A80E19CA185300CD404D;
+			remoteInfo = PowerLine;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8972049F202F41B39477661A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6A2FDC4D563428EB986563C /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		E60CFFA919CA2447000D9CCF /* BaseProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseProvider.h; path = Providers/BaseProvider.h; sourceTree = "<group>"; };
+		E60CFFAA19CA2447000D9CCF /* BaseProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseProvider.m; path = Providers/BaseProvider.m; sourceTree = "<group>"; };
+		E60CFFAC19CA24EC000D9CCF /* UserProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProvider.h; sourceTree = "<group>"; };
+		E60CFFAD19CA24EC000D9CCF /* UserProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProvider.m; sourceTree = "<group>"; };
+		E60CFFB019CA2543000D9CCF /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		E60CFFB119CA2543000D9CCF /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		E696A80F19CA185300CD404D /* PowerLine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PowerLine.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E696A81219CA185300CD404D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E696A81419CA185300CD404D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E696A81619CA185300CD404D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E696A81819CA185300CD404D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		E696A81C19CA185300CD404D /* PowerLine-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PowerLine-Info.plist"; sourceTree = "<group>"; };
+		E696A81E19CA185300CD404D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E696A82019CA185300CD404D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E696A82219CA185400CD404D /* PowerLine-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PowerLine-Prefix.pch"; sourceTree = "<group>"; };
+		E696A82319CA185400CD404D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E696A82419CA185400CD404D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E696A82719CA185400CD404D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		E696A82A19CA185400CD404D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		E696A82D19CA185400CD404D /* PowerLine.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PowerLine.xcdatamodel; sourceTree = "<group>"; };
+		E696A82F19CA185400CD404D /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		E696A83019CA185400CD404D /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		E696A83519CA185400CD404D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E696A83B19CA185400CD404D /* PowerLineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PowerLineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E696A83C19CA185400CD404D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		E696A84519CA185400CD404D /* PowerLineTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PowerLineTests-Info.plist"; sourceTree = "<group>"; };
+		E696A84719CA185400CD404D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E696A84919CA185400CD404D /* PowerLineTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PowerLineTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E696A80C19CA185300CD404D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E696A81519CA185300CD404D /* CoreGraphics.framework in Frameworks */,
+				E696A81919CA185300CD404D /* CoreData.framework in Frameworks */,
+				E696A81719CA185300CD404D /* UIKit.framework in Frameworks */,
+				E696A81319CA185300CD404D /* Foundation.framework in Frameworks */,
+				C0B1486EBE6F4F8CBEAE4BA4 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E696A83819CA185400CD404D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E696A83D19CA185400CD404D /* XCTest.framework in Frameworks */,
+				E696A84019CA185400CD404D /* CoreData.framework in Frameworks */,
+				E696A83F19CA185400CD404D /* UIKit.framework in Frameworks */,
+				E696A83E19CA185400CD404D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E60CFFA819CA23F2000D9CCF /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				E60CFFA919CA2447000D9CCF /* BaseProvider.h */,
+				E60CFFAA19CA2447000D9CCF /* BaseProvider.m */,
+				E60CFFAC19CA24EC000D9CCF /* UserProvider.h */,
+				E60CFFAD19CA24EC000D9CCF /* UserProvider.m */,
+			);
+			name = Providers;
+			sourceTree = "<group>";
+		};
+		E60CFFAF19CA252E000D9CCF /* Enteties */ = {
+			isa = PBXGroup;
+			children = (
+				E60CFFB019CA2543000D9CCF /* User.h */,
+				E60CFFB119CA2543000D9CCF /* User.m */,
+			);
+			name = Enteties;
+			sourceTree = "<group>";
+		};
+		E696A80619CA185300CD404D = {
+			isa = PBXGroup;
+			children = (
+				E696A81A19CA185300CD404D /* PowerLine */,
+				E696A84319CA185400CD404D /* PowerLineTests */,
+				E696A81119CA185300CD404D /* Frameworks */,
+				E696A81019CA185300CD404D /* Products */,
+				B6A2FDC4D563428EB986563C /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		E696A81019CA185300CD404D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E696A80F19CA185300CD404D /* PowerLine.app */,
+				E696A83B19CA185400CD404D /* PowerLineTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E696A81119CA185300CD404D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E696A81219CA185300CD404D /* Foundation.framework */,
+				E696A81419CA185300CD404D /* CoreGraphics.framework */,
+				E696A81619CA185300CD404D /* UIKit.framework */,
+				E696A81819CA185300CD404D /* CoreData.framework */,
+				E696A83C19CA185400CD404D /* XCTest.framework */,
+				8972049F202F41B39477661A /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E696A81A19CA185300CD404D /* PowerLine */ = {
+			isa = PBXGroup;
+			children = (
+				E60CFFAF19CA252E000D9CCF /* Enteties */,
+				E60CFFA819CA23F2000D9CCF /* Providers */,
+				E696A82319CA185400CD404D /* AppDelegate.h */,
+				E696A82419CA185400CD404D /* AppDelegate.m */,
+				E696A82619CA185400CD404D /* Main_iPhone.storyboard */,
+				E696A82919CA185400CD404D /* Main_iPad.storyboard */,
+				E696A82F19CA185400CD404D /* MasterViewController.h */,
+				E696A83019CA185400CD404D /* MasterViewController.m */,
+				E696A83519CA185400CD404D /* Images.xcassets */,
+				E696A82C19CA185400CD404D /* PowerLine.xcdatamodeld */,
+				E696A81B19CA185300CD404D /* Supporting Files */,
+			);
+			path = PowerLine;
+			sourceTree = "<group>";
+		};
+		E696A81B19CA185300CD404D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E696A81C19CA185300CD404D /* PowerLine-Info.plist */,
+				E696A81D19CA185300CD404D /* InfoPlist.strings */,
+				E696A82019CA185300CD404D /* main.m */,
+				E696A82219CA185400CD404D /* PowerLine-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E696A84319CA185400CD404D /* PowerLineTests */ = {
+			isa = PBXGroup;
+			children = (
+				E696A84919CA185400CD404D /* PowerLineTests.m */,
+				E696A84419CA185400CD404D /* Supporting Files */,
+			);
+			path = PowerLineTests;
+			sourceTree = "<group>";
+		};
+		E696A84419CA185400CD404D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E696A84519CA185400CD404D /* PowerLineTests-Info.plist */,
+				E696A84619CA185400CD404D /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E696A80E19CA185300CD404D /* PowerLine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E696A84D19CA185400CD404D /* Build configuration list for PBXNativeTarget "PowerLine" */;
+			buildPhases = (
+				FDD31F319AA04D5AB7B4C3FC /* Check Pods Manifest.lock */,
+				E696A80B19CA185300CD404D /* Sources */,
+				E696A80C19CA185300CD404D /* Frameworks */,
+				E696A80D19CA185300CD404D /* Resources */,
+				B8780F97F13D464DBEFEF3A4 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PowerLine;
+			productName = PowerLine;
+			productReference = E696A80F19CA185300CD404D /* PowerLine.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E696A83A19CA185400CD404D /* PowerLineTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E696A85019CA185400CD404D /* Build configuration list for PBXNativeTarget "PowerLineTests" */;
+			buildPhases = (
+				E696A83719CA185400CD404D /* Sources */,
+				E696A83819CA185400CD404D /* Frameworks */,
+				E696A83919CA185400CD404D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E696A84219CA185400CD404D /* PBXTargetDependency */,
+			);
+			name = PowerLineTests;
+			productName = PowerLineTests;
+			productReference = E696A83B19CA185400CD404D /* PowerLineTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E696A80719CA185300CD404D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Nikolay Shatilo";
+				TargetAttributes = {
+					E696A83A19CA185400CD404D = {
+						TestTargetID = E696A80E19CA185300CD404D;
+					};
+				};
+			};
+			buildConfigurationList = E696A80A19CA185300CD404D /* Build configuration list for PBXProject "PowerLine" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E696A80619CA185300CD404D;
+			productRefGroup = E696A81019CA185300CD404D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E696A80E19CA185300CD404D /* PowerLine */,
+				E696A83A19CA185400CD404D /* PowerLineTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E696A80D19CA185300CD404D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E696A82B19CA185400CD404D /* Main_iPad.storyboard in Resources */,
+				E696A83619CA185400CD404D /* Images.xcassets in Resources */,
+				E696A82819CA185400CD404D /* Main_iPhone.storyboard in Resources */,
+				E696A81F19CA185300CD404D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E696A83919CA185400CD404D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E696A84819CA185400CD404D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B8780F97F13D464DBEFEF3A4 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FDD31F319AA04D5AB7B4C3FC /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E696A80B19CA185300CD404D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E60CFFB219CA2543000D9CCF /* User.m in Sources */,
+				E696A83119CA185400CD404D /* MasterViewController.m in Sources */,
+				E696A82E19CA185400CD404D /* PowerLine.xcdatamodeld in Sources */,
+				E696A82519CA185400CD404D /* AppDelegate.m in Sources */,
+				E696A82119CA185300CD404D /* main.m in Sources */,
+				E60CFFAB19CA2447000D9CCF /* BaseProvider.m in Sources */,
+				E60CFFAE19CA24ED000D9CCF /* UserProvider.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E696A83719CA185400CD404D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E696A84A19CA185400CD404D /* PowerLineTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E696A84219CA185400CD404D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E696A80E19CA185300CD404D /* PowerLine */;
+			targetProxy = E696A84119CA185400CD404D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E696A81D19CA185300CD404D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E696A81E19CA185300CD404D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E696A82619CA185400CD404D /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E696A82719CA185400CD404D /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		E696A82919CA185400CD404D /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E696A82A19CA185400CD404D /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		E696A84619CA185400CD404D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E696A84719CA185400CD404D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E696A84B19CA185400CD404D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E696A84C19CA185400CD404D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E696A84E19CA185400CD404D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6A2FDC4D563428EB986563C /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PowerLine/PowerLine-Prefix.pch";
+				INFOPLIST_FILE = "PowerLine/PowerLine-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E696A84F19CA185400CD404D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6A2FDC4D563428EB986563C /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PowerLine/PowerLine-Prefix.pch";
+				INFOPLIST_FILE = "PowerLine/PowerLine-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		E696A85119CA185400CD404D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PowerLine.app/PowerLine";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PowerLine/PowerLine-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "PowerLineTests/PowerLineTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		E696A85219CA185400CD404D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PowerLine.app/PowerLine";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PowerLine/PowerLine-Prefix.pch";
+				INFOPLIST_FILE = "PowerLineTests/PowerLineTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E696A80A19CA185300CD404D /* Build configuration list for PBXProject "PowerLine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E696A84B19CA185400CD404D /* Debug */,
+				E696A84C19CA185400CD404D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E696A84D19CA185400CD404D /* Build configuration list for PBXNativeTarget "PowerLine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E696A84E19CA185400CD404D /* Debug */,
+				E696A84F19CA185400CD404D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E696A85019CA185400CD404D /* Build configuration list for PBXNativeTarget "PowerLineTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E696A85119CA185400CD404D /* Debug */,
+				E696A85219CA185400CD404D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E696A82C19CA185400CD404D /* PowerLine.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E696A82D19CA185400CD404D /* PowerLine.xcdatamodel */,
+			);
+			currentVersion = E696A82D19CA185400CD404D /* PowerLine.xcdatamodel */;
+			path = PowerLine.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E696A80719CA185300CD404D /* Project object */;
+}
